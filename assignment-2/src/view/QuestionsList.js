@@ -1,11 +1,17 @@
 import React from "react";
 
 const QuestionsList = ({ questions, title1 }) => (
+    
     <div>
-        <h2>{ title1 || "Questions" }</h2>
-        <table border="1">
-            <thead>
-                <tr>
+        <div class="jumbotron jumbotron-fluid">  
+   
+        <div class="container "> 
+         <h1 >All the questions</h1>
+
+       
+         <table class="table table-bordered">
+         <thead>
+            <tr class="table-warning">
                     <th>Author</th>
                     <th>Title</th>
                     <th>Text</th>
@@ -17,7 +23,7 @@ const QuestionsList = ({ questions, title1 }) => (
             <tbody>
                 {
                     questions.map((question, index) => (
-                        <tr key={index}>
+                        <tr class="table-light" key={index}>
                             <td>{question.author}</td>
                             <td>{question.title}</td>
                             <td>{question.text}</td>
@@ -32,6 +38,9 @@ const QuestionsList = ({ questions, title1 }) => (
         <br />
        
     </div>
+    </div>
+    </div>
+    
 );
 
 export default QuestionsList;

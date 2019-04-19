@@ -8,7 +8,7 @@ import SmartCreateQuestion from './view/SmartCreateQuestion';
 import SmartLoginUser from './view/SmartLoginUser';
 import SmartUserOperations from './view/SmartUserOperations';
 import SmartFilterQuestions from './view/SmartFilterQuestions';
-//import SmartStudentDetails from './view/SmartStudentDetails';
+
 
 const App = () => (
   <div className="App">

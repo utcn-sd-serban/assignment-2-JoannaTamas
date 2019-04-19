@@ -1,23 +1,26 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 const FilterQuestions = ({questions,title , onFilter,onFilterButton}) => (
     <div>
-      
-        <h2>Filter by title</h2>
-        <div>
+    <div class="jumbotron jumbotron-fluid">  
+   
+   <div class="container "> 
+   <h1 >Filter by title</h1>
             
-            <label>Enter title: </label>
-            <input value={title} 
+            <div class="form-group">
+             <label>Title: </label>
+              <input type="title" class="form-control" id="tit"value={title} 
                 onChange={ e => onFilter("title", e.target.value) } />
-            <br />
-            <button onClick={onFilterButton}>Filter!</button>
+             </div>
+             <button type="button" class="btn btn-warning btn-lg " onClick={onFilterButton}>Filter!</button>
             <br />
             <br />
             
-            <table border="1">
-            <thead>
-                <tr>
+            <table class="table table-bordered">
+             <thead>
+            <tr class="table-warning">
                     <th>Author</th>
                     <th>Title</th>
                     <th>Text</th>
@@ -29,7 +32,7 @@ const FilterQuestions = ({questions,title , onFilter,onFilterButton}) => (
             <tbody>
                 {
                     questions.map((question, index) => (
-                        <tr key={index}>
+                        <tr class="table-light"  key={index}>
                             <td>{question.author}</td>
                             <td>{question.title}</td>
                             <td>{question.text}</td>
@@ -42,6 +45,7 @@ const FilterQuestions = ({questions,title , onFilter,onFilterButton}) => (
         </table>
         
         </div>
+    </div>
     </div>
 
     
